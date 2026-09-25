@@ -11,7 +11,7 @@
     <circle cx="2" cy="2" r="1.1" fill="#111111" opacity="0.055"/>
   </pattern>
 </defs>
-<metadata>{&quot;scene_id&quot;: &quot;S005&quot;, &quot;composition_id&quot;: &quot;CO-COMP-06B&quot;, &quot;family&quot;: &quot;SYSTEM_MAP&quot;, &quot;status&quot;: &quot;EXPERIMENTAL&quot;, &quot;selection_mode&quot;: &quot;EXPERIMENTAL_TEST&quot;, &quot;visual_system&quot;: &quot;CO_VISUAL_V3&quot;, &quot;art_direction&quot;: &quot;CO_ART_DIRECTION_V4&quot;, &quot;accent&quot;: &quot;lime&quot;, &quot;character_present&quot;: false, &quot;audio_present&quot;: false, &quot;motion_present&quot;: false, &quot;generated_at&quot;: &quot;2026-09-24T20:36:40.947473-03:00&quot;}</metadata>
+<metadata>{&quot;scene_id&quot;: &quot;S005&quot;, &quot;composition_id&quot;: &quot;CO-COMP-06B&quot;, &quot;family&quot;: &quot;SYSTEM_MAP&quot;, &quot;status&quot;: &quot;APPROVED&quot;, &quot;selection_mode&quot;: &quot;PRODUCTION&quot;, &quot;visual_system&quot;: &quot;CO_VISUAL_V3&quot;, &quot;art_direction&quot;: &quot;CO_ART_DIRECTION_V4&quot;, &quot;accent&quot;: &quot;lime&quot;, &quot;character_present&quot;: false, &quot;audio_present&quot;: false, &quot;motion_present&quot;: false, &quot;generated_at&quot;: &quot;2026-09-24T20:36:40.947473-03:00&quot;}</metadata>
 <g id="scene-S005" data-composition="CO-COMP-06B" data-static-test="true">
   <rect width="1920" height="1080" fill="#F4F3EF"/>
   <rect width="1920" height="1080" fill="url(#paper-grain)"/>

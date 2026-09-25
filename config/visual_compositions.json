@@ -630,7 +630,14 @@
     {
       "id": "CO-COMP-04B",
       "family": "MOVING_BASELINE",
-      "status": "EXPERIMENTAL",
+      "status": "APPROVED",
+      "motion_status": "MOTION_APPROVED",
+      "approval": {
+        "approved_by": "human",
+        "approved_on": "2026-09-25",
+        "scope": "static_composition",
+        "reference": "tests/visual_coverage_s007_s012"
+      },
       "version": 1,
       "description": "Baseline vertical — o canvas é dividido verticalmente. Lado esquerdo: estado anterior (desbotado). Lado direito: estado novo (dominante). Uma barra vertical forte marca a fronteira entre os dois mundos. Elementos podem existir dos dois lados para mostrar o mesmo item em dois estados.",
       "visual_type": "MOVING_BASELINE",
@@ -1328,6 +1335,143 @@
       ]
     },
     {
+      "id": "CO-COMP-03D",
+      "family": "SHRINKING_SPACE",
+      "status": "APPROVED",
+      "motion_status": "MOTION_APPROVED",
+      "approval": {
+        "approved_by": "human",
+        "approved_on": "2026-09-25",
+        "scope": "static_composition",
+        "reference": "tests/visual_coverage_s007_s012"
+      },
+      "version": 1.1,
+      "geometry_change_reason": "VISUAL_GEOMETRY_MASTER_DEFECT",
+      "geometry_contract": "VISUAL_GEOMETRY_CONTRACT@1.0",
+      "protected_type": [
+        "ALTA",
+        "MEDIA",
+        "BAIXA"
+      ],
+      "data_mass_protected": true,
+      "description": "Temporal decay — uma única grandeza atravessa três estados longitudinais e perde amplitude de forma contínua. A redução é percebida pela forma antes dos labels, sem cards, calendário protagonista ou estética de dashboard.",
+      "visual_type": "TEMPORAL_DECAY",
+      "semantic_use": [
+        "progressive_loss",
+        "intensidade decrescente",
+        "novidade que perde força",
+        "emoção que se achata"
+      ],
+      "allowed_accents": [
+        "lime",
+        "amber"
+      ],
+      "supports_character": false,
+      "character_functions": [],
+      "supports_animation": true,
+      "dominance": "longitudinal_amplitude_decay",
+      "content_zones": [
+        {
+          "id": "state_1",
+          "x": 144,
+          "y": 176,
+          "width": 480,
+          "height": 560,
+          "content_type": "composite",
+          "font_size": 72,
+          "max_chars": 10,
+          "max_lines": 2,
+          "align": "center",
+          "overflow_policy": "REJECT_COMPOSITION",
+          "safe_area_policy": "STRICT",
+          "content_format": "keyword"
+        },
+        {
+          "id": "state_2",
+          "x": 720,
+          "y": 256,
+          "width": 480,
+          "height": 480,
+          "content_type": "composite",
+          "font_size": 64,
+          "max_chars": 10,
+          "max_lines": 2,
+          "align": "center",
+          "overflow_policy": "REJECT_COMPOSITION",
+          "safe_area_policy": "STRICT",
+          "content_format": "keyword"
+        },
+        {
+          "id": "state_3",
+          "x": 1296,
+          "y": 376,
+          "width": 480,
+          "height": 360,
+          "content_type": "composite",
+          "font_size": 56,
+          "max_chars": 10,
+          "max_lines": 2,
+          "align": "center",
+          "overflow_policy": "REJECT_COMPOSITION",
+          "safe_area_policy": "STRICT",
+          "content_format": "keyword"
+        },
+        {
+          "id": "progress_axis",
+          "x": 144,
+          "y": 810,
+          "width": 1632,
+          "height": 18,
+          "content_type": "structural_line",
+          "font_size": 0,
+          "max_chars": 0,
+          "max_lines": 0,
+          "align": "center",
+          "overflow_policy": "REJECT_COMPOSITION",
+          "safe_area_policy": "BLEED_ALLOWED"
+        },
+        {
+          "id": "interpretation_label",
+          "x": 1100,
+          "y": 900,
+          "width": 676,
+          "height": 60,
+          "content_type": "label",
+          "font_size": 28,
+          "max_chars": 24,
+          "max_lines": 1,
+          "align": "right",
+          "overflow_policy": "REJECT_COMPOSITION",
+          "safe_area_policy": "STRICT",
+          "content_format": "short_label"
+        }
+      ],
+      "compatible_content": [
+        "temporal_decay",
+        "three_state_intensity_loss",
+        "progressive_flattening",
+        "subjective_amplitude_loss"
+      ],
+      "incompatible_content": [
+        "dual_force_squeeze",
+        "calendar_dashboard",
+        "three_card_sequence",
+        "independent_categories"
+      ],
+      "entry_motion_candidates": [
+        "draw_decay",
+        "amplitude_reduction"
+      ],
+      "exit_motion_candidates": [
+        "progressive_flatten",
+        "sequential_decay"
+      ],
+      "continuity_candidates": [
+        "final_amplitude_becomes_baseline",
+        "progress_axis_carries_forward"
+      ]
+    },
+    {
       "id": "CO-COMP-05A",
       "family": "EDITORIAL_TYPE",
       "status": "EXPERIMENTAL",
@@ -1520,8 +1664,18 @@
     {
       "id": "CO-COMP-06A",
       "family": "SYSTEM_MAP",
-      "status": "EXPERIMENTAL",
-      "version": 1,
+      "status": "APPROVED",
+      "approval": {
+        "approved_by": "production_static_validation",
+        "approved_on": "2026-09-25",
+        "scope": "static_composition",
+        "reference": "tests/visual_coverage_s013_s018"
+      },
+      "version": 1.1,
+      "geometry_change_reason": "VISUAL_GEOMETRY_MASTER_DEFECT",
+      "geometry_contract": "VISUAL_GEOMETRY_CONTRACT@1.0",
+      "protect_primary_type": true,
+      "instance_geometry_override": false,
       "description": "Parallel shift: três variáveis distintas compartilham uma mesma referência diagonal. A relação é percebida por alinhamento, escala e deslocamento paralelo, sem nós, círculos ou setas de fluxograma.",
       "visual_type": "SYSTEM_MAP",
       "semantic_use": [
@@ -1686,7 +1840,13 @@
     {
       "id": "CO-COMP-06B",
       "family": "SYSTEM_MAP",
-      "status": "EXPERIMENTAL",
+      "status": "APPROVED",
+      "approval": {
+        "approved_by": "production_static_validation",
+        "approved_on": "2026-09-25",
+        "scope": "static_composition",
+        "reference": "tests/visual_coverage_s013_s018"
+      },
       "version": 1,
       "description": "Shared driver: uma massa de referência comum ocupa uma lateral e três saídas respondem pelo mesmo sistema de trilhos. A relação nasce da arquitetura compartilhada, não de um nó central com setas.",
       "visual_type": "SYSTEM_MAP",
@@ -1824,8 +1984,18 @@
     {
       "id": "CO-COMP-04D",
       "family": "MOVING_BASELINE",
-      "status": "EXPERIMENTAL",
-      "version": 1.1,
+      "status": "APPROVED",
+      "motion_status": "MOTION_APPROVED",
+      "approval": {
+        "approved_by": "human",
+        "approved_on": "2026-09-25",
+        "scope": "static_composition",
+        "reference": "tests/visual_coverage_s007_s012"
+      },
+      "version": 1.2,
+      "geometry_change_reason": "VISUAL_GEOMETRY_MASTER_DEFECT",
+      "geometry_contract": "VISUAL_GEOMETRY_CONTRACT@1.0",
+      "instance_geometry_override": false,
       "description": "Baseline conceitual: uma referência diagonal separa um estado anterior menor de um estado atual dominante. A mudança é expressa por palavras de escalas distintas, sem exigir valor monetário, calendário ou relógio.",
       "visual_type": "MOVING_BASELINE",
       "semantic_use": [

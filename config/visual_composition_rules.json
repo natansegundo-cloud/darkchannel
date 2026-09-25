@@ -39,7 +39,11 @@
       "secondary_families": ["DATA_HERO"],
       "forbidden_families": [],
       "character_preference": "recommended_for_scale",
-      "continuity_notes": "O espaço final pode virar o ponto de partida da cena seguinte."
+      "continuity_notes": "O espaço final pode virar o ponto de partida da cena seguinte.",
+      "variant_routing": {
+        "dual_force_squeeze": "CO-COMP-03A",
+        "temporal_decay": "CO-COMP-03D"
+      }
     },
     "time_adaptation": {
       "description": "Com o tempo, algo que era excepcional passa a ser percebido como normal. Adaptação hedônica.",

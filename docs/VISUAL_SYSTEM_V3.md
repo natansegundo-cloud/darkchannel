@@ -2,9 +2,9 @@
 
 Este documento é a fonte de verdade visual para a migração das 48 cenas do `CO-001`.
 
-**SYSTEM STATUS: CANDIDATE — TESTE SEQUENCIAL PENDENTE**
+**SYSTEM STATUS: STABLE — FUNDAÇÃO VALIDADA**
 
-O V1 está preservado e o V2 é histórico; nenhum deles deve ser sobrescrito pela migração. O V3 somente recebe o status `LOCKED FOR CO-001` depois da aprovação de um teste audiovisual com 6–8 cenas reais consecutivas.
+O V1 está preservado e o V2 é histórico; nenhum deles deve ser sobrescrito pela migração. O V3 é a fundação visual estável; cada composição ainda depende de aprovação humana e dos contratos geométricos aplicáveis.
 
 ## Camada de direção de arte
 

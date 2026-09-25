@@ -58,6 +58,55 @@ BEATS_DATA: list[dict[str, Any]] = [
         "ssml_body": 'A primeira peça é uma habilidade útil do cérebro que,<break time="120ms"/> neste caso,<break time="140ms"/> parece uma pequena traição:<break time="500ms"/> adaptação.',
         "pause_after_ms": 400,
     },
+    {
+        "beat_id": "B007",
+        "title": "O celular deixa de ser novo",
+        "raw_text": "Pense no primeiro dia usando um celular novo. A tela parece absurda. A câmera impressiona. Até abrir um aplicativo dá uma satisfação ridícula. Um mês depois, ele não parece novo. Parece apenas seu celular.",
+        "ssml_body": "Pense no primeiro dia usando um celular novo. A tela parece absurda. A câmera impressiona. Até abrir um aplicativo dá uma satisfação ridícula. Um mês depois, ele não parece novo. Parece apenas seu celular.",
+        "pause_after_ms": 400,
+    },
+    {
+        "beat_id": "B008",
+        "title": "O desgaste da mudança positiva",
+        "raw_text": "Uma mudança positiva pode passar pelo mesmo processo. Em um estudo longitudinal sobre adaptação, pesquisadores acompanharam como o bem-estar ganho depois de mudanças positivas se desgastava. O estudo não media salários: acompanhava mudanças positivas em 481 estudantes. Duas rotas apareceram: a emoção nova perdia força e a aspiração subia.",
+        "ssml_body": "Uma mudança positiva pode passar pelo mesmo processo. Em um estudo longitudinal sobre adaptação, pesquisadores acompanharam como o bem-estar ganho depois de mudanças positivas se desgastava. O estudo não media salários: acompanhava mudanças positivas em 481 estudantes. Duas rotas apareceram: a emoção nova perdia força e a aspiração subia.",
+        "pause_after_ms": 450,
+    },
+    {
+        "beat_id": "B009",
+        "title": "O novo ponto de partida",
+        "raw_text": "Isso significa que o aumento não precisa diminuir para parecer menor. Basta ele deixar de ser uma conquista e virar o novo ponto de partida.",
+        "ssml_body": "Isso significa que o aumento não precisa diminuir para parecer menor. Basta ele deixar de ser uma conquista e virar o novo ponto de partida.",
+        "pause_after_ms": 400,
+    },
+    {
+        "beat_id": "B010",
+        "title": "O luxo vira normal",
+        "raw_text": "Ontem, pedir comida era exceção. Hoje, é terça-feira. Ontem, o aplicativo de transporte era emergência. Hoje, chuva já parece motivo suficiente. O luxo não precisa continuar parecendo luxo. Quando entra na rotina, ganha outro nome: normal.",
+        "ssml_body": "Ontem, pedir comida era exceção. Hoje, é terça-feira. Ontem, o aplicativo de transporte era emergência. Hoje, chuva já parece motivo suficiente. O luxo não precisa continuar parecendo luxo. Quando entra na rotina, ganha outro nome: normal.",
+        "pause_after_ms": 400,
+    },
+    {
+        "beat_id": "B011",
+        "title": "A expectativa alcança a renda",
+        "raw_text": "E aqui está a primeira recompensa dessa história: seu cérebro não pergunta apenas quanto eu tenho? Ele também pergunta quanto isso é diferente do que eu já esperava ter? Quando a expectativa alcança a renda, parte da sensação de avanço desaparece.",
+        "ssml_body": "E aqui está a primeira recompensa dessa história: seu cérebro não pergunta apenas quanto eu tenho? Ele também pergunta quanto isso é diferente do que eu já esperava ter? Quando a expectativa alcança a renda, parte da sensação de avanço desaparece.",
+        "pause_after_ms": 450,
+    },
+    {
+        "beat_id": "B012",
+        "title": "Segurança material é real",
+        "raw_text": "Isso não quer dizer que uma renda maior não possa melhorar a vida. Ela pode ampliar segurança e escolhas, sobretudo quando reduz privações. Pagar moradia, comida, saúde e ter margem para imprevistos não é uma ilusão psicológica.",
+        "ssml_body": "Isso não quer dizer que uma renda maior não possa melhorar a vida. Ela pode ampliar segurança e escolhas, sobretudo quando reduz privações. Pagar moradia, comida, saúde e ter margem para imprevistos não é uma ilusão psicológica.",
+        "pause_after_ms": 450,
+    },
+    {
+        "beat_id": "B013",
+        "title": "A associação média",
+        "raw_text": "Uma reanálise publicada em 2023 encontrou uma associação positiva entre renda e bem-estar emocional na média. Mas o efeito era pequeno, variava entre grupos e não confirmava aquela história popular de que existe um número mágico depois do qual dinheiro para de fazer diferença para todo mundo.",
+        "ssml_body": "Uma reanálise publicada em 2023 encontrou uma associação positiva entre renda e bem-estar emocional na média. Mas o efeito era pequeno, variava entre grupos e não confirmava aquela história popular de que existe um número mágico depois do qual dinheiro para de fazer diferença para todo mundo.",
+        "pause_after_ms": 400,
+    },
 ]
 
 

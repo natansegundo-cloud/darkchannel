@@ -1,8 +1,21 @@
 # Pipeline audiovisual por beats
 
-Status: **migração estrutural validada no piloto S001–S006 com Kokoro ONNX**.
+Status: **fundação estável validada; produção canônica em Azure Speech SDK com WORD_BOUNDARY_REAL**.
 
 Esta arquitetura separa decisões editoriais, timing real de áudio, direção visual e execução técnica. O Visual System V3 e o rig V4 são fontes independentes e não foram alterados por esta migração.
+
+## Fundação congelada
+
+Fundação atual: **STABLE** (2026-09-25).
+
+- `NARRATION_ENGINE = STABLE`
+- `WORD_BOUNDARY = STABLE`
+- `VOICE_PROFILE = STABLE`
+- `VISUAL_SYSTEM_V3 = STABLE`
+- `VISUAL_GEOMETRY_CONTRACT_V1 = STABLE`
+- `RIG_V4 = STABLE`
+
+`STABLE` significa que tarefas normais de episódio não modificam o componente sem defeito reproduzível ou decisão humana explícita. O status das composições editoriais continua obedecendo aprovação humana individual.
 
 ## Ordem de produção
 
@@ -24,7 +37,7 @@ O gerador de voz ignora títulos e notas e sintetiza somente as linhas iniciadas
 
 ## Contrato do 03A
 
-O Kokoro atual usa `create_timed()`. O modelo fornece tempos nativos por fonema; o pipeline agrupa esses fonemas por palavra e falha se a contagem não puder ser reconciliada com o texto-fonte.
+O provider local Kokoro usa `create_timed()` e permanece fallback explícito. O caminho de produção usa Azure Speech SDK com boundaries reais; qualquer timing local só é usado quando solicitado explicitamente.
 
 Campos de auditoria incluem provider, voz, velocidade, método de timing, hashes do roteiro e do WAV, taxa de amostragem, duração, beats, palavras e pausas inseridas.
 

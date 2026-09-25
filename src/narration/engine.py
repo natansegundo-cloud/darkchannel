@@ -36,7 +36,7 @@ def _sha256(path: Path) -> str:
 
 
 def _provider_name(value: str) -> str:
-    aliases = {"azure": "azure_rest", "kokoro": "local_kokoro", "local": "local_kokoro"}
+    aliases = {"azure": "azure_sdk", "kokoro": "local_kokoro", "local": "local_kokoro"}
     return aliases.get(value.casefold(), value.casefold())
 
 
@@ -98,7 +98,7 @@ def run_narration(
     raw_combined_path: Path | None = None,
     episode_id: str = "CO-001",
     narrator_id: str | None = None,
-    provider: str = "azure_rest",
+    provider: str = "azure_sdk",
     env_file: Path = config.DEFAULT_ENV_PATH,
     pause_ms: int | None = None,
     no_processing: bool = False,
@@ -199,6 +199,8 @@ def run_narration(
         }
         if result.metadata:
             row["provider_metadata"] = result.metadata
+        if result.metadata.get("synthesis_id"):
+            row["synthesis_id"] = result.metadata["synthesis_id"]
         timing_beats.append(row)
         print(f"  [{index}/{len(selected_beats)}] {beat['beat_id']} recebido: dur={beat_duration:.2f}s | fala={active_speech_duration:.2f}s | {words_per_sec} pal/s")
         if index < len(selected_beats):
@@ -281,7 +283,7 @@ def main(argv: list[str] | None = None) -> int:
     provider = args.provider
     if provider is None:
         env = config.load_env(config.project_path(args.env_file))
-        provider = env.get("TTS_PROVIDER", "azure_rest")
+        provider = env.get("TTS_PROVIDER", "azure_sdk")
     try:
         run_narration(
             input_path=config.project_path(args.entrada),

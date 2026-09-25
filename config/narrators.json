@@ -4,7 +4,7 @@
   "narrators": [
     {
       "id": "capital_oculto_narrator_v1",
-      "provider": "azure",
+      "provider": "azure_sdk",
       "voice": "pt-BR-AntonioNeural",
       "language": "pt-BR",
       "profile": [
@@ -29,9 +29,10 @@
         "voice_name_override": "AZURE_VOICE_NAME"
       },
       "fallback": {
-        "provider": "kokoro",
+        "provider": "local_kokoro",
         "voice_alias": "santa",
-        "silent": false
+        "silent": false,
+        "explicit_only": true
       }
     }
   ]

@@ -106,6 +106,9 @@ def synthesize(
         raise ProviderError(f"Falha na síntese Azure SDK: reason={reason}; details={error}")
     if not boundaries or any(item["audio_offset_ms"] is None for item in boundaries):
         raise ProviderError("Azure SDK não retornou WordBoundary completo.")
+    synthesis_id = str(getattr(result, "result_id", "") or "").strip()
+    if not synthesis_id:
+        raise ProviderError("Azure SDK não retornou synthesis_id para a síntese.")
     audio_data = bytes(result.audio_data)
     sample_rate, _samples = read_pcm_wav(audio_data)
     boundaries.sort(key=lambda item: (item["audio_offset_100ns"] is None, item["audio_offset_100ns"] or 0))
@@ -113,7 +116,11 @@ def synthesize(
         audio_data=audio_data,
         sample_rate=sample_rate,
         boundaries=boundaries,
-        metadata={"timing_quality": "WORD_BOUNDARY_REAL", "sdk_package": SDK_PACKAGE},
+        metadata={
+            "timing_quality": "WORD_BOUNDARY_REAL",
+            "sdk_package": SDK_PACKAGE,
+            "synthesis_id": synthesis_id,
+        },
     )
 
 

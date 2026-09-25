@@ -73,6 +73,11 @@ SELECTION = {
     "S006": "CO-COMP-04D",
 }
 
+GEOMETRY_PROMOTIONS = {
+    "CO-COMP-06A": {"version": 1.1, "protect_primary_type": True},
+    "CO-COMP-04D": {"version": 1.2, "protect_primary_type": True},
+}
+
 
 def read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -187,15 +192,25 @@ def metadata(scene_id: str, comp_id: str, family: str, accent: str) -> str:
         "motion_present": False,
         "generated_at": dt.datetime.now().astimezone().isoformat(),
     }
+    if comp_id in GEOMETRY_PROMOTIONS:
+        data.update({
+            **GEOMETRY_PROMOTIONS[comp_id],
+            "geometry_change_reason": "VISUAL_GEOMETRY_MASTER_DEFECT",
+            "geometry_contract": "VISUAL_GEOMETRY_CONTRACT@1.0",
+            "instance_geometry_override": False,
+        })
     return f"<metadata>{html.escape(json.dumps(data, ensure_ascii=False))}</metadata>"
 
 
 def wrap(scene_id: str, comp_id: str, family: str, accent: str, body: str) -> str:
+    promotion = GEOMETRY_PROMOTIONS.get(comp_id)
+    version_label = f" v{promotion['version']}" if promotion else ""
+    version_attribute = f' data-version="{promotion["version"]}"' if promotion else ""
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="{scene_id} {comp_id}">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="{scene_id} {comp_id}{version_label}">
 {style_defs()}
 {metadata(scene_id, comp_id, family, accent)}
-<g id="scene-{scene_id}" data-composition="{comp_id}" data-static-test="true">
+<g id="scene-{scene_id}" data-composition="{comp_id}"{version_attribute} data-static-test="true">
   <rect width="1920" height="1080" fill="{BG}"/>
   <rect width="1920" height="1080" fill="url(#paper-grain)"/>
 {body}
@@ -232,24 +247,24 @@ def render_05b(scene_id: str) -> str:
 
 def render_06a(scene_id: str) -> str:
     body = f'''
-  <text x="1824" y="136" class="label" text-anchor="end">QUANDO A RENDA SOBE</text>
-  <path d="M610 904 L1690 132" stroke="{LIME}" stroke-width="30" stroke-linecap="round" opacity="0.95"/>
-  <g>
-    <text x="96" y="330" class="headline" style="font-size:82px">NORMAL</text>
-    <path d="M560 272 H1110 L1228 358 H560 Z" fill="{INK}"/>
+  <g data-layer="20" data-geometry-type="TRACK">
+    <rect x="560" y="272" width="636" height="86" rx="18" fill="{INK}" data-routing="STOP_BEFORE_ACCENT_BLOCK"/>
     <rect x="1196" y="272" width="386" height="86" rx="18" fill="{LIME}"/>
-  </g>
-  <g>
-    <text x="96" y="580" class="headline" style="font-size:70px">COMPARAÇÃO</text>
-    <path d="M560 522 H1300 L1418 608 H560 Z" fill="{INK}"/>
+    <rect x="560" y="522" width="826" height="86" rx="18" fill="{INK}" data-routing="STOP_BEFORE_ACCENT_BLOCK"/>
     <rect x="1386" y="522" width="268" height="86" rx="18" fill="{LIME}"/>
-  </g>
-  <g>
-    <text x="96" y="830" class="headline" style="font-size:82px">DESPESAS</text>
-    <path d="M560 772 H1490 L1608 858 H560 Z" fill="{INK}"/>
+    <rect x="560" y="772" width="1016" height="86" rx="18" fill="{INK}" data-routing="STOP_BEFORE_ACCENT_BLOCK"/>
     <rect x="1576" y="772" width="184" height="86" rx="18" fill="{LIME}"/>
   </g>
-  <text x="1824" y="966" class="label" text-anchor="end">O SISTEMA SE MOVE JUNTO</text>'''
+  <path d="M610 904 L1390 220" stroke="{LIME}" stroke-width="30" stroke-linecap="round" opacity="0.95" data-layer="40" data-geometry-type="ACCENT_LINE" data-routing="STOP_BEFORE" data-arrowhead="false" data-semantic-role="REFERENCIA_COMPARTILHADA"/>
+  <g data-layer="50">
+    <text x="96" y="330" class="headline" style="font-size:82px">NORMAL</text>
+    <text x="96" y="580" class="headline" style="font-size:70px">COMPARAÇÃO</text>
+    <text x="96" y="830" class="headline" style="font-size:82px">DESPESAS</text>
+  </g>
+  <g data-layer="60">
+    <text x="1824" y="136" class="label" text-anchor="end">QUANDO A RENDA SOBE</text>
+    <text x="1824" y="966" class="label" text-anchor="end">O SISTEMA SE MOVE JUNTO</text>
+  </g>'''
     return wrap(scene_id, "CO-COMP-06A", "SYSTEM_MAP", "lime", body)
 
 
@@ -277,15 +292,17 @@ def render_06b(scene_id: str) -> str:
 
 def render_04d(scene_id: str) -> str:
     body = f'''
-  <path d="M-40 930 L1910 182" stroke="{INK}" stroke-width="36" stroke-linecap="round"/>
-  <path d="M1110 495 L1910 188" stroke="{LIME}" stroke-width="36" stroke-linecap="round"/>
+  <g data-layer="20" data-protect-primary-type="true">
+    <path d="M-40 990 L48 990" stroke="{INK}" stroke-width="36" stroke-linecap="round" data-geometry-type="STRUCTURAL_LINE" data-routing="STOP_BEFORE"/>
+    <path d="M540 970 L1020 511" stroke="{INK}" stroke-width="36" stroke-linecap="round" data-geometry-type="STRUCTURAL_LINE" data-routing="ROUTE_AROUND"/>
+    <path d="M1020 511 L1824 511" stroke="{LIME}" stroke-width="18" stroke-linecap="round" data-geometry-type="ACCENT_LINE" data-routing="TRANSFORM_TO_UNDERLINE"/>
+  </g>
   <g opacity="0.48">
     <text x="96" y="774" class="label">ANTES</text>
     <text x="88" y="928" class="display" style="font-size:148px;letter-spacing:-7px">EXTRA</text>
   </g>
   <text x="1824" y="154" class="label" text-anchor="end">AGORA</text>
   <text x="1818" y="438" class="display" text-anchor="end" style="font-size:252px;letter-spacing:-14px">NORMAL</text>
-  <rect x="1020" y="502" width="804" height="18" rx="9" fill="{LIME}"/>
   <text x="1824" y="636" class="headline" text-anchor="end" style="font-size:66px">VIROU REFERÊNCIA</text>
   <text x="1824" y="964" class="label" text-anchor="end">O GANHO NÃO SUMIU • A BASE MUDOU</text>'''
     return wrap(scene_id, "CO-COMP-04D", "MOVING_BASELINE", "lime", body)

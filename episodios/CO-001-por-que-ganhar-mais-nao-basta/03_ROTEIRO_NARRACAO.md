@@ -78,19 +78,51 @@ Os horários desta seção são estimativas editoriais. O contrato técnico do p
 
 > A primeira peça é uma habilidade útil do cérebro que, neste caso, parece uma pequena traição: adaptação.
 
-Pense no primeiro dia usando um celular novo. A tela parece absurda. A câmera impressiona. Até abrir um aplicativo dá uma satisfação ridícula. Um mês depois, ele não parece novo. Parece apenas seu celular.
+### B007 — O celular deixa de ser novo
 
-Uma mudança positiva pode passar pelo mesmo processo. Em um estudo longitudinal sobre adaptação, pesquisadores acompanharam como o bem-estar ganho depois de mudanças positivas se desgastava. O estudo não media salários: acompanhava mudanças positivas em 481 estudantes. Duas rotas apareceram: a emoção nova perdia força e a aspiração subia.
+- **Função:** exemplo concreto de adaptação
+- **Payoff:** o mesmo objeto perde excepcionalidade
+- **Claims:** nenhum
+- **Ênfase:** “primeiro dia” e “um mês depois”
+- **Pausa:** natural entre os dois estados
 
-Isso significa que o aumento não precisa diminuir para parecer menor. Basta ele deixar de ser uma conquista e virar o novo ponto de partida.
+> Pense no primeiro dia usando um celular novo. A tela parece absurda. A câmera impressiona. Até abrir um aplicativo dá uma satisfação ridícula. Um mês depois, ele não parece novo. Parece apenas seu celular.
+
+### B008 — O desgaste da mudança positiva
+
+- **Função:** evidência do mecanismo de adaptação
+- **Payoff:** emoção perde força enquanto aspiração sobe
+- **Claims:** estudo longitudinal com 481 estudantes; não media salários
+- **Ênfase:** “duas rotas”
+- **Pausa:** curta antes do resultado
+
+> Uma mudança positiva pode passar pelo mesmo processo. Em um estudo longitudinal sobre adaptação, pesquisadores acompanharam como o bem-estar ganho depois de mudanças positivas se desgastava. O estudo não media salários: acompanhava mudanças positivas em 481 estudantes. Duas rotas apareceram: a emoção nova perdia força e a aspiração subia.
+
+### B009 — O novo ponto de partida
+
+- **Função:** conclusão do mecanismo 1
+- **Payoff:** a referência muda sem o aumento diminuir
+- **Claims:** inferência explicativa do episódio
+- **Ênfase:** “novo ponto de partida”
+- **Pausa:** curta ao final
+
+> Isso significa que o aumento não precisa diminuir para parecer menor. Basta ele deixar de ser uma conquista e virar o novo ponto de partida.
+
+### B010 — O luxo vira normal
 
 Ontem, pedir comida era exceção. Hoje, é terça-feira. Ontem, o aplicativo de transporte era emergência. Hoje, chuva já parece motivo suficiente. O luxo não precisa continuar parecendo luxo. Quando entra na rotina, ganha outro nome: normal.
+
+### B011 — A expectativa alcança a renda
 
 E aqui está a primeira recompensa dessa história: seu cérebro não pergunta apenas “quanto eu tenho?”. Ele também pergunta “quanto isso é diferente do que eu já esperava ter?”. Quando a expectativa alcança a renda, parte da sensação de avanço desaparece.
 
 ### 02:08–03:03 — Dinheiro importa, mas não existe número mágico
 
+### B012 — Segurança material é real
+
 Isso não quer dizer que uma renda maior não possa melhorar a vida. Ela pode ampliar segurança e escolhas, sobretudo quando reduz privações. Pagar moradia, comida, saúde e ter margem para imprevistos não é uma ilusão psicológica.
+
+### B013 — A associação média
 
 Uma reanálise publicada em 2023 encontrou uma associação positiva entre renda e bem-estar emocional na média. Mas o efeito era pequeno, variava entre grupos e não confirmava aquela história popular de que existe um número mágico depois do qual dinheiro para de fazer diferença para todo mundo.
 

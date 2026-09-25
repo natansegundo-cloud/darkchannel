@@ -93,3 +93,18 @@ Se houver conflito, a ordem acima prevalece. Regras globais de segurança contin
 - Não deixar arquivos vazios, marcadores de implementação futura ou conteúdo abreviado.
 - Ao terminar uma etapa relevante, executar `python scripts/validar_projeto.py`.
 
+## Context economy
+
+Código em `_archive/` é histórico e não deve ser inspecionado
+durante tarefas normais.
+
+Para cada domínio, começar pelo entry point oficial em `src/<domínio>/`.
+
+Não pesquisar implementações antigas quando o caminho canônico
+resolver a tarefa.
+
+Não ler o repositório inteiro antes de alterações localizadas.
+
+Manifests e configs devem ser preferidos a repetir regras em prompts.
+
+Relatórios devem ser curtos salvo quando o diagnóstico exigir detalhe.
