@@ -81,8 +81,13 @@ Se houver conflito, a ordem acima prevalece. Regras globais de segurança contin
 
 - Preservar arquivos e mudanças do usuário.
 - Usar `apply_patch` para edições manuais.
-- Não instalar dependências sem necessidade e aprovação.
-- Os scripts deste projeto devem funcionar apenas com a biblioteca padrão do Python.
+- Dependências Python externas são permitidas somente quando as três condições abaixo forem satisfeitas:
+  1. resolvem uma limitação técnica real e documentada (não preferência de estilo ou conveniência);
+  2. estão listadas com versão travada em `config/dependencias_aprovadas.md`, com uma linha explicando o motivo;
+  3. têm aprovação humana explícita registrada antes do primeiro uso em código.
+- Nenhuma dependência pode ser instalada ou importada sem as três condições acima atendidas. Na dúvida, não instalar e perguntar.
+- Ferramentas externas que não são pacotes Python (por exemplo, `ffmpeg` chamado via subprocess) não são “dependência Python” para efeito desta regra, mas seu uso também deve ser registrado em `config/dependencias_aprovadas.md`.
+- Lógica de geração de SVG, validação estrutural, regras de composição e content zones permanecem obrigatoriamente stdlib-only. A exceção desta regra vale apenas para funcionalidades que a biblioteca padrão comprovadamente não resolve.
 - Não deixar arquivos vazios, marcadores de implementação futura ou conteúdo abreviado.
 - Ao terminar uma etapa relevante, executar `python scripts/validar_projeto.py`.
 
