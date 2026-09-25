@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "default_narrator": "capital_oculto_narrator_v1",
+  "narrators": [
+    {
+      "id": "capital_oculto_narrator_v1",
+      "provider": "azure",
+      "voice": "pt-BR-AntonioNeural",
+      "language": "pt-BR",
+      "profile": [
+        "masculino",
+        "adulto",
+        "documental",
+        "conversacional",
+        "seguro",
+        "contido"
+      ],
+      "delivery": {
+        "rate": "-4%",
+        "pitch": "0%",
+        "volume": "default",
+        "notes": "Ritmo moderadamente deliberado; sem estilo comercial, telemarketing ou entusiasmo artificial."
+      },
+      "azure": {
+        "output_format": "riff-24khz-16bit-mono-pcm",
+        "env_file": "scripts/.env",
+        "key_names": ["AZURE_SPEECH_KEY", "SPEECH_KEY"],
+        "region_names": ["AZURE_SPEECH_REGION", "SPEECH_REGION"],
+        "voice_name_override": "AZURE_VOICE_NAME"
+      },
+      "fallback": {
+        "provider": "kokoro",
+        "voice_alias": "santa",
+        "silent": false
+      }
+    }
+  ]
+}

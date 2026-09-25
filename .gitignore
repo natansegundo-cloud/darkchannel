@@ -1,0 +1,41 @@
+# Arquivos de sistema e editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.tts/
+.comfyui/
+.svg-profile-*/
+
+# Mídia bruta e renders pesados
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.wav
+*.mp3
+*.flac
+*.aep
+*.prproj
+
+# Perfis e logs temporários de navegadores usados nos testes
+tests/**/logs/
+
+# Arquivos temporários
+*.tmp
+*.temp
+~$*
+
+# Segredos locais
+.env
+.env.*
+!.env.example
+scripts/.env

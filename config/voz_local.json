@@ -1,0 +1,14 @@
+{
+  "idioma": "pt-br",
+  "voz_padrao": "santa",
+  "vozes_permitidas": {
+    "alex": "pm_alex",
+    "santa": "pm_santa"
+  },
+  "velocidade_padrao": 0.95,
+  "maximo_caracteres_por_trecho": 350,
+  "pausa_entre_trechos_ms": 180,
+  "pausa_entre_paragrafos_ms": 420,
+  "modelo": ".tts/models/kokoro-v1.0.fp16.onnx",
+  "banco_de_vozes": ".tts/models/voices-v1.0.bin"
+}

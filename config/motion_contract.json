@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "CO_MOTION_CONTRACT_V1",
+  "voice_pacing": {
+    "provider": "azure_speech_rest",
+    "voice": "pt-BR-AntonioNeural",
+    "rate": "-7%",
+    "pitch": "0%",
+    "volume": "default",
+    "request_strategy": "1_BEAT_PER_CONTEXTUAL_SSML_REQUEST",
+    "no_speech_overlap": true,
+    "inter_phrase_pause_min_ms": 80,
+    "speech_density": {
+      "ideal_min_words_per_sec": 2.2,
+      "ideal_max_words_per_sec": 3.0,
+      "warning_threshold_words_per_sec": 3.2
+    },
+    "pauses_ms": {
+      "logical_comma": [80, 140],
+      "clause_shift": [140, 220],
+      "sentence_end": [280, 380],
+      "argumentative_turn": [380, 520],
+      "rhetorical_question_or_revelation": [450, 650],
+      "beat_end": [300, 500]
+    }
+  },
+  "visual_pacing": {
+    "first_useful_state_ms": 350,
+    "visual_change_target_ms": 2500,
+    "max_static_hold_ms": 4000,
+    "protect_primary_type": true,
+    "motion_language": {
+      "easing": "ease_out_cubic",
+      "idle": "none",
+      "micro_reveal_ms": [200, 350],
+      "explanatory_ms": [450, 900],
+      "major_transform_ms": [700, 1400],
+      "transition_ms": [250, 500]
+    }
+  },
+  "guardrails": {
+    "speech_overlap_allowed": false,
+    "empty_initial_screen_allowed": false,
+    "decorative_movement_allowed": false,
+    "line_crossing_primary_type_allowed": false
+  }
+}
