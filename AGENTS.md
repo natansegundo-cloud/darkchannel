@@ -76,6 +76,8 @@ Se houver conflito, a ordem acima prevalece. Regras globais de segurança contin
 - Datas: `AAAA-MM-DD`.
 - Snapshots: uma nova linha por momento; nunca substituir medição anterior.
 - Capturas recebidas: `AAAA-MM-DD_CO-001_24h_overview.png`, trocando `overview` por `reach`, `engagement`, `audience` ou `revenue`.
+- Não criar novos scripts versionados por sufixo de nome (`_v2`, `_v3`, `_final`, `_novo`). Usar git para versionar; usar `src/<domínio>/engine.py` + `providers/` para variações de implementação dentro do mesmo domínio.
+- Cada domínio (narração, imagens, composição, render) tem um único ponto de entrada em `scripts/` ou via `main.py`, que delega para `src/<domínio>/`.
 
 ## Escrita e manutenção
 
